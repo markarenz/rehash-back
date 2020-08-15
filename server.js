@@ -77,7 +77,7 @@ const server = new ApolloServer({
 });
 server.applyMiddleware({ app, path: '/api' });
 
-app.listen(process.env.SERVER_PORT || 5000, () => {
+app.listen((process.env.SERVER_PORT || 5000), () => {
     console.log(
         "Server instantiated. Listening on port " + process.env.SERVER_PORT + "."
     );
