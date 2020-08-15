@@ -24,6 +24,7 @@ app.use(fileUpload());
 // enable CORS
 app.use(cors());
 
+console.log('CONNECT:',process.env.DB_ATLAS_MONGO_USER, process.env.DB_ATLAS_MONGO_PW, process.env.DB_ATLAS_MONGO_SERVER);
 mongoose
     .connect(
         'mongodb+srv://' + process.env.DB_ATLAS_MONGO_USER + ':' + process.env.DB_ATLAS_MONGO_PW + process.env.DB_ATLAS_MONGO_SERVER + '/ReHash?retryWrites=true&w=majority',
