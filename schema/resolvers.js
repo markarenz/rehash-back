@@ -374,10 +374,6 @@ const resolvers = {
                         user.name = name;
                     }
                     // TODO: Email changes are disabled for now - this is a phase 2 item
-                    // if (email) {
-                    //     if (user.email !== email) {
-                    //         user.email = email;
-                    // }
                     if (authUser && authUser.tokenAuth0Id === user.auth0Id) {
                         return user.save();
                     } else {
@@ -397,24 +393,6 @@ const resolvers = {
 
         },
     },
-    // getUsers: async (_, context) => {
-    //     // const { token } = await context();
-    //     // const { error } = await isTokenValid(token);
-    //     const users = await User.find();
-    //     return !error
-    //         ? users.toArray()
-    //         : [];
-    // },
-
-    // getUserById: async ({ id }, context) => {
-    //     if (await isAuthenticated(context)){
-    //         const user = User.findOne({ _id: id });
-    //         return user;
-    //     } else {
-    //         return {};
-    //     }
-    // },
-
 
 };
 module.exports = resolvers;

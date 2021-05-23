@@ -44,17 +44,6 @@ mongoose
 app.use('/avatar', avatarUpload.processAvatarUpload);
 app.use('/contact', contact.processContact);
 
-// app.use(
-//     '/api',
-//     cors(),
-//     graphqlHTTP(async req => ({
-//         schema,
-//         rootValue: resolvers,
-//         context: () => context(req),
-//         graphiql: true,
-//     })),
-// );
-
 const server = new ApolloServer({
     debug: true,
     typeDefs: schema,
