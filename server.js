@@ -44,7 +44,6 @@ mongoose
 app.use('/avatar', avatarUpload.processAvatarUpload);
 app.use('/contact', contact.processContact);
 
-
 // app.use(
 //     '/api',
 //     cors(),
